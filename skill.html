@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.jpeg">
+    <style>
+        .section_4 {
+            margin-top: 130px;
+            height: 50vh;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 40%;
+
+            transform: translate(-50%, -50%);
+            position: relative;
+            left: 50%;
+            top: 30%;
+        }
+
+        .cont {
+            margin-top: 40px;
+            max-width: 100%;
+            padding: 30px 30px 50px;
+            background-color: rgb(214, 198, 198);
+            border-radius: 10px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .head-skill {
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            color: whitesmoke;
+            letter-spacing: 2px;
+        }
+
+        .details {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .bar {
+            position: relative;
+            border: 0 0 0.1px 0px solid #cd3d09;
+            border-radius: 20px;
+        }
+
+        .bar div {
+            position: relative;
+            width: 0;
+            height: 4px;
+            border-radius: 10px;
+            background-color: #7eaec8;
+        }
+
+        .skills:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        #html-bar {
+            animation: html-fill 2s forwards;
+        }
+
+        @keyframes html-fill {
+            100% {
+                width: 90%;
+            }
+        }
+
+        #javascript-bar {
+            animation: js-fill 2s forwards;
+        }
+
+        @keyframes js-fill {
+            100% {
+                width: 50%;
+            }
+        }
+
+        #jQuery-bar {
+            animation: jQuery-fill 2s forwards;
+        }
+
+        @keyframes jQuery-fill {
+            100% {
+                width: 30%;
+            }
+        }
+
+        #css-bar {
+            animation: css-fill 2s forwards;
+        }
+
+        @keyframes css-fill {
+            100% {
+                width: 75%;
+            }
+        }
+
+        #java-bar {
+            animation: java-fill 2s forwards;
+        }
+
+        @keyframes java-fill {
+            100% {
+                width: 70%;
+            }
+        }
+
+        #python-bar {
+            animation: python-fill 2s forwards;
+
+        }
+
+        @keyframes python-fill {
+            100% {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="center">
+            <h1 class="responsive-headline" style="font-size: 70.7px;color: aliceblue; ">Bimal Itani</h1>
+        </div>
+    </header>
+    <div class="nav">
+
+
+        <ul class="content_nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="exp.html">EXPERIENCE</a></li>
+            <li><a href="proj.html">PROJECTS</a></li>
+            <li><a href="skill.html">SKILLS</a></li>
+        </ul>
+        </nav>
+    </div>
+    <section class="section_4">
+        <div class="wrap">
+            <div class="cont">
+                <h1 class="head-skill">Skills</h1>
+                <div class="skills">
+                    <div class="details">
+                        <span>HTML</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="html-bar"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="details">
+                        <span>CSS</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="css-bar"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="details">
+                        <span>Javascript</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="javascript-bar"></div>
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <div class="details">
+                        <span>jQuery</span>
+                        <span>30%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="jQuery-bar"></div>
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <div class="details">
+                        <span>Java</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="java-bar"></div>
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <div class="details">
+                        <span>Python(pandas, scipy, numpy, matplotlib, pytorch, tensorflow)</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="python-bar"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <div class="row banner">
+        <div class="banner-text">
+            <ul class="social">
+                <li><a href="https://github.com/bimalitani100"><i class="fa fa-github fa-2x"
+                            style="color:white"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/bimal-itani-599465254/"><i class="fa fa-linkedin fa-2x"
+                            style="color:white"></i></a></li>
+                <li><a href="mailto:bimalitani100@gmail.com"><i class="fa fa-envelope fa-2x"
+                            style="color:white"></i></a></li>
+                <li><a href="https://www.facebook.com/bimal.itani.96"><i class="fa fa-facebook fa-2x"
+                            style="color:white"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <h3 class="copy">&copy;Bimal Itani-2024.All Rights Reserved.</h3>
+    </footer>
+</body>
+
+</html>

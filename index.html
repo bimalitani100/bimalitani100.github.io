@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimal Itani | Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.jpeg">
+    <style>
+        /* Add this to the end of your existing CSS file or create a new one */
+
+.hackathon {
+    padding: 50px 20px;
+}
+
+.hackathon-heading {
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 40px;
+}
+
+.hackathon-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hackathon-event {
+    background-color: grey;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.hackathon-event:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.hackathon-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.hackathon-event:hover .hackathon-image {
+    transform: scale(1.05);
+}
+
+.hackathon-text {
+    padding: 20px;
+}
+
+.hackathon-text h2 {
+    font-family: 'Red Hat Display', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hackathon-text p {
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.hackathon-event::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hackathon-event:hover::before {
+    opacity: 1;
+}
+
+.hackathon-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hackathon-text h2, .hackathon-text p {
+    color: #fff;
+}
+
+.hackathon-text p {
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.hackathon-event:hover .hackathon-text p {
+    display: block;
+    opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="responsive-headline" style="font-size: 70.7px;color: aliceblue; ">Bimal Itani</h1>
+    </header>
+    <div class="nav">
+        <ul class="content_nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="exp.html">EXPERIENCE</a></li>
+            <li><a href="proj.html">PROJECTS</a></li>
+            <li><a href="skill.html">SKILLS</a></li>
+        </ul>
+    </div>
+    <div class="row banner">
+        <div class="banner-text">
+            <h3> <span>Aspiring Computer Engineer</span> | <span>Mathematician</span> | <span>Programmer</span></h3>
+            <h1 id="elementEl">Hi, I am a sophomore majoring in Computer Engineering at Claflin University. </h1>
+            </h3>
+            <hr>
+            <ul class="social">
+                <li><a href="https://github.com/bimalitani100" target="_blank"><i class="fa fa-github fa-2x"
+                            style="color:white"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/bimal-itani-599465254/" target="_blank"><i
+                            class="fa fa-linkedin fa-2x" style="color:white"></i></a></li>
+                <li><a href="mailto:bimalitani100@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x"
+                            style="color:white"></i></a></li>
+                <li><a href="https://www.facebook.com/bimal.itani.96" target="_blank"><i class="fa fa-facebook fa-2x"
+                            style="color:white"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="about">
+        <h1 class="about-heading">About Me:</h1>
+        <div class="about-content">
+            <img src="leader.jpg" alt="Bimal Itani" class="profile-image">
+            <div class="about-text">
+                <p class="about-paragraph">
+                    Greetings! I'm <span class="highlight-text">Bimal Itani</span>, a passionate Computer Engineering
+                    freshman at Claflin University, where my journey into the captivating world of technology and
+                    mathematics began. My mission? To harness innovation and solve real-world challenges through the
+                    power of computation.
+                    <br><br>
+                    I firmly believe that technology can be a driving force for positive change in our society, and
+                    that's what fuels my relentless curiosity. When I'm not engrossed in lines of code or diving into
+                    complex mathematical problems, you'll often find me at the cutting edge of the latest tech trends,
+                    tinkering away on exciting projects, or eagerly sharing my knowledge with others.
+                    <br><br>
+                    Hailing from a country known for its rich cultural diversity and boasting the highest number of
+                    peaks on this planet, I carry that spirit of diversity and aspiration in all I do. I'm also an
+                    active member of Claflin University's Google Developer Student Club and a proud contributor to our
+                    global student organization. Additionally, I've been honored as a full-ride Alice Carson Tisdale
+                    Honors Scholar, further motivating me to reach new heights in my academic and technological
+                    pursuits.
+                    <br><br>
+                    I'm here to connect with kindred spirits, explore collaborative opportunities, and embark on
+                    exciting projects that push the boundaries of what's possible. So, don't hesitate to reach out—I'm
+                    always up for a stimulating chat!
+                </p>
+            </div>
+        </div>
+        <a href="mailto:bimalitani100@gmail.com" class="contact-button">Contact Me</a>
+    </section>
+    </section>
+    <section class="hackathon">
+        <h1 class="hackathon-heading">Hackathons</h1>
+        <div class="hackathon-content">
+            <div class="hackathon-event">
+                <img src="IMG_5050-preview.png" alt="Hackathon Event 1" class="hackathon-image">
+                <div class="hackathon-text">
+                    <h2>JP Morgan Chase Data For Good Hackathon</h2>
+                    <p>• Engaged in a strategic project to identify expansion areas for Ordinarie Heroes, a nonprofit organization focusing on youth empowerment in underserved communities.
+                        <br><br>
+                        • Leveraged Python and its libraries—Pandas for data manipulation, SciPy for statistical analysis, and GeoPandas for geographical data processing—to conduct a comprehensive analysis of demographic, educational, and food insecurity metrics across Philadelphia neighborhoods.
+                        <br><br>
+                        • Recommended expansion into a strategically chosen ZIP code, forecasted to increase OH’s service reach by 50%, based on in-depth analysis of socio-economic factors and logistical considerations such as donor base proximity.
+                    </p>
+                </div>
+            </div>
+            <div class="hackathon-event">
+                <img src="hacksc.png" alt="Hackathon Event 2" class="hackathon-image">
+                <div class="hackathon-text">
+                    <h2>Capture the Flag Cyber-Q Hackathon</h2>
+                    <p>• Applied and learned skills effectively, contributing to the team's resounding victory by identifying the command for a crucial
+                        problem, in the Capture-the-Flag CyberQ Hackathon hosted at Benedict College.
+                        <br><br>
+                        • Demonstrated proficiency in commands such as Nmap, ipconfig, and ls, showcasing a hands-on understanding of cybersecurity
+                        tools.
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+       
+        <h3 class="copy">&copy;Bimal Itani-2024.All Rights Reserved.</h3>
+        
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="typewriter.js"></script>
+</body>
+</html>
