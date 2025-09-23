@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -101,6 +101,7 @@
             width: 100%;
             height: 110%;
             background-size: cover;
+            background-position: center;
             background-position: 0 0;
             transition: transform calc(var(--d) * 1.5) var(--e);
             pointer-events: none;
@@ -121,19 +122,27 @@
         }
 
         .card:nth-child(1):before {
-            background-image: url('/personal\ .png');
+            background-image: url('../images/personal.png');
+            background-size: cover;     /* Make the image cover the whole area */
+            background-position: center;
         }
 
         .card:nth-child(2):before {
-            background-image: url('/dfg.png');
+            background-image: url('../images/dfg.png');
+            background-size: cover;     /* Make the image cover the whole area */
+            background-position: center;
         }
 
         .card:nth-child(3):before {
-            background-image: url('/bnkingapp.jpeg');
+            background-image: url('../images/bnkingapp.jpeg');
+            background-size: cover;     /* Make the image cover the whole area */
+            background-position: center;
         }
 
         .card:nth-child(4):before {
-            background-image: url('/neuralnet.jpeg');
+            background-image: url('../images/neuralnet.jpeg');
+            background-size: cover;     /* Make the image cover the whole area */
+            background-position: center;
         }
 
         .content {
@@ -316,5 +325,5 @@
     <footer>
         <h3 class="copy">&copy;Bimal Itani-2024.All Rights Reserved.</h3>
     </footer>
-    <script src="/btn.js"></script>
+    <script src="JS/btn.js"></script>
 </body>
