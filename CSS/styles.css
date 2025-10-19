@@ -105,7 +105,7 @@ h3 {
     float: left;
     width: 20%; /* Adjust as needed */
     margin-right: 20px;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 .about-text {
@@ -237,6 +237,7 @@ h3 {
         opacity: 0;
     }
 }
+
 .copy {
     color: #cd3d09;
     text-align: center;

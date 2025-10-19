@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,125 +14,713 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <link rel="icon" href="icon.jpeg">
+    <link rel="icon" href="/images/icon.jpeg">
     <style>
         /* Add this to the end of your existing CSS file or create a new one */
 
-.hackathon {
-    padding: 50px 20px;
-}
 
-.hackathon-heading {
-    text-align: center;
-    color: aliceblue;
-    font-family: 'Oswald', sans-serif;
-    margin-bottom: 40px;
-}
+        .hackathon {
+            padding: 50px 20px;
+        }
 
-.hackathon-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+        .hackathon-heading {
+            text-align: center;
+            color: aliceblue;
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 40px;
+        }
 
-.hackathon-event {
-    background-color: grey;
-    border: 1px solid black;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 300px;
-    text-align: center;
-    position: relative;
-}
+        .hackathon-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.hackathon-event:hover {
-    transform: translateY(-10px);
+        .hackathon-event {
+            background-color: grey;
+            border: 1px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+        }
 
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
+        .hackathon-event:hover {
+            transform: translateY(-10px);
 
-.hackathon-image {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-.hackathon-event:hover .hackathon-image {
-    transform: scale(1.05);
-}
+        .hackathon-image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
 
-.hackathon-text {
-    padding: 20px;
-}
+        .hackathon-event:hover .hackathon-image {
+            transform: scale(1.05);
+        }
 
-.hackathon-text h2 {
-    font-family: 'Red Hat Display', sans-serif;
-    color: #333;
-    margin-bottom: 10px;
-}
+        .hackathon-text {
+            padding: 20px;
+        }
 
-.hackathon-text p {
-    color: #666;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
-}
+        .hackathon-text h2 {
+            font-family: 'Red Hat Display', sans-serif;
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-.hackathon-event::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+        .hackathon-text p {
+            color: #666;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.5;
+        }
 
-.hackathon-event:hover::before {
-    opacity: 1;
-}
+        .hackathon-event::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-.hackathon-text {
-    position: relative;
-    z-index: 1;
-}
+        .hackathon-event:hover::before {
+            opacity: 1;
+        }
 
-.hackathon-text h2, .hackathon-text p {
-    color: #fff;
-}
+        .hackathon-text {
+            position: relative;
+            z-index: 1;
+        }
 
-.hackathon-text p {
-    display: none;
-    transition: opacity 0.3s ease;
-}
+        .hackathon-text h2,
+        .hackathon-text p {
+            color: #fff;
+        }
 
-.hackathon-event:hover .hackathon-text p {
-    display: block;
-    opacity: 1;
-}
+        .hackathon-text p {
+            display: none;
+            transition: opacity 0.3s ease;
+        }
 
+        .hackathon-event:hover .hackathon-text p {
+            display: block;
+            opacity: 1;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        nav,
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            z-index: 1000;
+        }
+
+        .content_nav {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .content_nav li {
+            margin: 0 15px;
+        }
+
+        .content_nav li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        .content_nav li a.active {
+            border-bottom: 2px solid yellow;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 80px 20px;
+            /* space for fixed nav */
+        }
+
+        /* Css for specific experience section only: */
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            /* Center the images horizontally */
+            gap: 20px;
+            /* Space between the images */
+            margin-top: 20px;
+            /* Add some margin on top to separate from text */
+        }
+
+        .DFG {
+            border-radius: 10%;
+            width: 70%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: rotate(-5deg);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .internship-image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .DFG:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+
+        #section_2 {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 0;
+        }
+
+        .experience {
+            font-family: 'Oswald', sans-serif;
+            color: white;
+            position: relative;
+            bottom: 90px;
+            text-align: center;
+
+        }
+
+        #experience {
+            min-height: 100vh;
+            padding: 80px 20px;
+            /* space for fixed navbar */
+            /* optional, to make it distinct */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .timeline {
+            width: 80%;
+            height: auto;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline ul {
+            list-style: none;
+        }
+
+        .timeline ul li {
+            padding: 20px;
+            background-color: #1e1f22;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .timeline ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-content h1 {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 300;
+        }
+
+        .timeline-content .date {
+            font-size: 12px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .timeline:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 2px;
+                height: 100%;
+                background-color: gray;
+            }
+
+            .timeline ul li {
+                width: 50%;
+                position: relative;
+                margin-bottom: 50px;
+            }
+
+            .timeline ul li:nth-child(odd) {
+                float: left;
+                clear: right;
+                transform: translateX(-30px);
+                border-radius: 20px 0px 20px 20px;
+            }
+
+            .timeline ul li:nth-child(even) {
+                float: right;
+                clear: left;
+                transform: translateX(30px);
+                border-radius: 0px 20px 20px 20px;
+            }
+
+            .timeline ul li::before {
+                content: "";
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: gray;
+                top: 0px;
+            }
+
+            .timeline ul li:nth-child(odd)::before {
+                transform: translate(50%, -50%);
+                right: -30px;
+            }
+
+            .timeline ul li:nth-child(even)::before {
+                transform: translate(-50%, -50%);
+                left: -30px;
+            }
+
+            .timeline-content .date {
+                position: absolute;
+                top: -30px;
+            }
+
+            .timeline ul li:hover::before {
+                background-color: aqua;
+            }
+        }
+
+        /* Only Project section CSS:*/
+        #project {
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .my-projects-btn {
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        #gitbtn {
+            background-color: orange;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.025rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #gitbtn:hover {
+            background-color: #1f1e1e;
+        }
+
+
+
+        .per_projects {
+            font-family: 'Oswald', sans-serif;
+            color: orangered;
+            text-align: center;
+        }
+
+
+        :root {
+            --d: 700ms;
+            --e: cubic-bezier(0.19, 1, 0.22, 1);
+            --font-sans: "Rubik", sans-serif;
+            --font-serif: "Cardo", serif;
+        }
+
+        .page-content {
+            display: grid;
+            grid-gap: 1rem;
+            padding: 1rem;
+            max-width: 1024px;
+            margin: 0 auto;
+            font-family: var(--font-sans);
+        }
+
+        @media (min-width: 600px) {
+            .page-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 800px) {
+            .page-content {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+            color: whitesmoke;
+            background-color: whitesmoke;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (min-width: 600px) {
+            .card {
+                height: 350px;
+            }
+        }
+
+        .card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+            background-size: cover;
+            background-position: center;
+            background-position: 0 0;
+            transition: transform calc(var(--d) * 1.5) var(--e);
+            pointer-events: none;
+        }
+
+        .card:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+            transform: translateY(-50%);
+            transition: transform calc(var(--d) * 2) var(--e);
+        }
+
+        .card:nth-child(1):before {
+            background-image: url('../images/personal.png');
+            background-size: cover;
+            /* Make the image cover the whole area */
+            background-position: center;
+        }
+
+        .card:nth-child(2):before {
+            background-image: url('../images/dfg.png');
+            background-size: cover;
+            /* Make the image cover the whole area */
+            background-position: center;
+        }
+
+        .card:nth-child(3):before {
+            background-image: url('../images/bnkingapp.jpeg');
+            background-size: cover;
+            /* Make the image cover the whole area */
+            background-position: center;
+        }
+
+        .card:nth-child(4):before {
+            background-image: url('../images/neuralnet.jpeg');
+            background-size: cover;
+            /* Make the image cover the whole area */
+            background-position: center;
+        }
+
+        .content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            transition: transform var(--d) var(--e);
+            z-index: 1;
+        }
+
+        .content>*+* {
+            margin-top: 1rem;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .copy {
+            font-family: var(--font-serif);
+            font-size: 1.125rem;
+            font-style: italic;
+            line-height: 1.35;
+        }
+
+        .btn {
+            cursor: pointer;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.65rem;
+            font-weight: bold;
+            letter-spacing: 0.025rem;
+            text-transform: uppercase;
+            color: white;
+            background-color: black;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #0d0d0d;
+        }
+
+        .btn:focus {
+            outline: 1px dashed yellow;
+            outline-offset: 3px;
+        }
+
+        @media (hover: hover) and (min-width: 600px) {
+            .card:after {
+                transform: translateY(0);
+            }
+
+            .content {
+                transform: translateY(calc(100% - 4.5rem));
+            }
+
+            .content>*:not(.title) {
+                opacity: 0;
+                transform: translateY(1rem);
+                transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+            }
+
+            .card:hover,
+            .card:focus-within {
+                align-items: center;
+            }
+
+            .card:hover:before,
+            .card:focus-within:before {
+                transform: translateY(-4%);
+            }
+
+            .card:hover:after,
+            .card:focus-within:after {
+                transform: translateY(-50%);
+            }
+
+            .card:hover .content,
+            .card:focus-within .content {
+                transform: translateY(0);
+            }
+
+            .card:hover .content>*:not(.title),
+            .card:focus-within .content>*:not(.title) {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: calc(var(--d) / 8);
+            }
+
+            .card:focus-within:before,
+            .card:focus-within:after,
+            .card:focus-within .content,
+            .card:focus-within .content>*:not(.title) {
+                transition-duration: 0s;
+            }
+        }
+
+        /* CSS specific for skills section:*/
+
+        #skills {
+            min-height: 100vh;
+            padding: 80px 20px;
+            /* space for fixed navbar */
+            /* optional, to make it distinct */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section_4 {
+            margin-top: 130px;
+            height: 50vh;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 40%;
+
+            transform: translate(-50%, -50%);
+            position: relative;
+            left: 50%;
+            top: 30%;
+        }
+
+        .cont {
+            margin-top: 40px;
+            max-width: 100%;
+            padding: 30px 30px 50px;
+            background-color: rgb(214, 198, 198);
+            border-radius: 10px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .head-skill {
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            color: whitesmoke;
+            letter-spacing: 2px;
+        }
+
+        .details {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .bar {
+            position: relative;
+            border: 0 0 0.1px 0px solid #cd3d09;
+            border-radius: 20px;
+        }
+
+        .bar div {
+            position: relative;
+            width: 0;
+            height: 4px;
+            border-radius: 10px;
+            background-color: #7eaec8;
+        }
+
+        .skills:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        #html-bar {
+            animation: html-fill 2s forwards;
+        }
+
+        @keyframes html-fill {
+            100% {
+                width: 90%;
+            }
+        }
+
+        #javascript-bar {
+            animation: js-fill 2s forwards;
+        }
+
+        @keyframes js-fill {
+            100% {
+                width: 50%;
+            }
+        }
+
+        #jQuery-bar {
+            animation: jQuery-fill 2s forwards;
+        }
+
+        @keyframes jQuery-fill {
+            100% {
+                width: 30%;
+            }
+        }
+
+        #css-bar {
+            animation: css-fill 2s forwards;
+        }
+
+        @keyframes css-fill {
+            100% {
+                width: 75%;
+            }
+        }
+
+        #java-bar {
+            animation: java-fill 2s forwards;
+        }
+
+        @keyframes java-fill {
+            100% {
+                width: 70%;
+            }
+        }
+
+        #python-bar {
+            animation: python-fill 2s forwards;
+
+        }
+
+        @keyframes python-fill {
+            100% {
+                width: 50%;
+            }
+        }
     </style>
 </head>
+
 <body>
+
     <header>
         <h1 class="responsive-headline" style="font-size: 70.7px;color: aliceblue; ">Bimal Itani</h1>
     </header>
     <div class="nav">
         <ul class="content_nav">
             <li><a href="index.html">HOME</a></li>
-            <li><a href="exp.html">EXPERIENCE</a></li>
-            <li><a href="proj.html">PROJECTS</a></li>
-            <li><a href="skill.html">SKILLS</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><a href="#project">PROJECTS</a></li>
+            <li><a href="#skills">SKILLS</a></li>
         </ul>
     </div>
     <div class="row banner">
         <div class="banner-text">
             <h3> <span>Aspiring Computer Engineer</span> | <span>Mathematician</span> | <span>Programmer</span></h3>
-            <h1 id="elementEl">Hi, I am a Junior majoring in Computer Science at Claflin University. </h1>
+            <h1 id="elementEl">Hi, Welcome to my personal Website. I am a Junior majoring in Computer Science at Claflin
+                University. </h1>
             </h3>
             <hr>
             <ul class="social">
@@ -177,43 +766,308 @@
         </div>
         <a href="mailto:bimalitani100@gmail.com" class="contact-button">Contact Me</a>
     </section>
-    </section>
-    <section class="hackathon">
-        <h1 class="hackathon-heading">Hackathons</h1>
-        <div class="hackathon-content">
-            <div class="hackathon-event">
-                <img src="images/IMG_5050-preview.png" alt="Hackathon Event 1" class="hackathon-image">
-                <div class="hackathon-text">
-                    <h2>JP Morgan Chase Data For Good Hackathon</h2>
-                    <p>• Engaged in a strategic project to identify expansion areas for Ordinarie Heroes, a nonprofit organization focusing on youth empowerment in underserved communities.
-                        <br><br>
-                        • Leveraged Python and its libraries—Pandas for data manipulation, SciPy for statistical analysis, and GeoPandas for geographical data processing—to conduct a comprehensive analysis of demographic, educational, and food insecurity metrics across Philadelphia neighborhoods.
-                        <br><br>
-                        • Recommended expansion into a strategically chosen ZIP code, forecasted to increase OH’s service reach by 50%, based on in-depth analysis of socio-economic factors and logistical considerations such as donor base proximity.
-                    </p>
+   
+    <section id="experience">
+        <section class="hackathon">
+            <h1 class="hackathon-heading">Hackathons</h1>
+            <div class="hackathon-content">
+                <div class="hackathon-event">
+                    <img src="images/JPMC_TX.jpeg" alt="Hackathon Event 1" class="hackathon-image">
+                    <div class="hackathon-text">
+                        <h2>JP Morgan Chase Data For Good Hackathon-TX(2025)</h2>
+                        <p>• Engaged in a strategic project to identify expansion areas for Ordinarie Heroes, a
+                            nonprofit organization focusing on youth empowerment in underserved communities.
+                            <br><br>
+                            • Leveraged Python and its libraries—Pandas for data manipulation, SciPy for statistical
+                            analysis, and GeoPandas for geographical data processing—to conduct a comprehensive analysis
+                            of demographic, educational, and food insecurity metrics across Philadelphia neighborhoods.
+                            <br><br>
+                            • Recommended expansion into a strategically chosen ZIP code, forecasted to increase OH’s
+                            service reach by 50%, based on in-depth analysis of socio-economic factors and logistical
+                            considerations such as donor base proximity.
+                            <br><br>
+                            <a href="https://hackaschack.ati.org/" class="contact-button">View Project</a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="hackathon-event">
-                <img src="images/hacksc.png" alt="Hackathon Event 2" class="hackathon-image">
-                <div class="hackathon-text">
-                    <h2>Capture the Flag Cyber-Q Hackathon</h2>
-                    <p>• Applied and learned skills effectively, contributing to the team's resounding victory by identifying the command for a crucial
-                        problem, in the Capture-the-Flag CyberQ Hackathon hosted at Benedict College.
-                        <br><br>
-                        • Demonstrated proficiency in commands such as Nmap, ipconfig, and ls, showcasing a hands-on understanding of cybersecurity
-                        tools.
+                <div class="hackathon-event">
+                    <img src="images/IMG_5050-preview.png" alt="Hackathon Event 2" class="hackathon-image">
+                    <div class="hackathon-text">
+                        <h2>JP Morgan Chase Data For Good Hackathon-NY(2024)</h2>
+                        <p>• Engaged in a strategic project to identify expansion areas for Ordinarie Heroes, a
+                            nonprofit organization focusing on youth empowerment in underserved communities.
+                            <br><br>
+                            • Leveraged Python and its libraries—Pandas for data manipulation, SciPy for statistical
+                            analysis, and GeoPandas for geographical data processing—to conduct a comprehensive analysis
+                            of demographic, educational, and food insecurity metrics across Philadelphia neighborhoods.
+                            <br><br>
+                            • Recommended expansion into a strategically chosen ZIP code, forecasted to increase OH’s
+                            service reach by 50%, based on in-depth analysis of socio-economic factors and logistical
+                            considerations such as donor base proximity.
+                            <br><br>
+                            <a href="https://github.com/bimalitani100/JPMC" class="contact-button">View Project</a>
+                        </p>
+                    </div>
                 </div>
+                <div class="hackathon-event">
+                    <img src="images/hacksc_resized.png" alt="Hackathon Event 3" class="hackathon-image">
+                    <div class="hackathon-text">
+                        <h2>Capture the Flag Cyber-Q Hackathon</h2>
+                        <p>• Applied and learned skills effectively, contributing to the team's resounding victory by
+                            identifying the command for a crucial
+                            problem, in the Capture-the-Flag CyberQ Hackathon hosted at Benedict College.
+                            <br><br>
+                            • Demonstrated proficiency in commands such as Nmap, ipconfig, and ls, showcasing a hands-on
+                            understanding of cybersecurity
+                            tools.
+                            <br><br>
+                            <a href="https://hackaschack.ati.org/" class="contact-button">View details</a>
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
-            
+        </section>
+        <div class="timeline">
+            <h1 class="experience">Work Experience and Community Service</h1>
+            <ul>
+                <li>
+                    <div class="timeline-content">
+                        <h3 class="date">02/2025- 08/2025</h3>
+                        <img src="images/Ag_first.jpg" alt="Hackathon Event 1" class="internship-image">
+                        <h1>nCino Analyst Intern</h1>
+                        <p>
+                            • Supported nCino (Salesforce) implementation by developing and maintaining master data
+                            mapping documents...
+                            <br><br>
+                            • Automated data validation and gap analysis using Python and advanced Excel, reducing
+                            manual review time by 30%.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-content">
+                        <h3 class="date">05/2024- 07/2024</h3>
+                        <h1>Summer Engineering AI Research Intern</h1>
+                        <p>
+                            • Collaborated with Dr. Pawar for 7 weeks, achieving model accuracies of 0.90 and 1, and
+                            implemented optimization techniques to enhance performance.
+                            <br><br>
+                            • Applied advanced techniques, including the use of VGG-16, to real-world medical imaging
+                            challenges, enhancing expertise in AI-driven healthcare solutions.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="timeline-content">
+                        <h3 class="date">09/2023 - Present</h3>
+                        <h1>NSBE (Secretary)</h1>
+                        <p>• Organized and facilitated workshops as part of NSBE initiatives, contributing to
+                            educational and professional development.
+                            <br><br>
+                            • Collaborated with fellow NSBE board members to design and deliver sessions on JDBC,
+                            enhancing members' knowledge and skills
+                            in database connectivity.
+                            <br><br>
+                            •Executed administrative duties efficiently, ensuring smooth communication and coordination
+                            among NSBE members.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-content">
+                        <h3 class="date">01/2023 - 05/2023</h3>
+                        <h1>IT Assistant (Student Worker) </h1>
+                        <p>•Provided comprehensive assistance to users, both remotely and in person, addressing
+                            hardware, peripheral device, and software
+                            issues.
+                            <br><br>
+                            •Managed the smooth setup and arrangement of computer workstations and devices ensuring
+                            optimal functionality for end-users.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-content">
+                        <h3 class="date">09/2023 - 11/2023</h3>
+                        <h1>Ev Mobility Fellow 2024-2025</h1>
+
+                        <p> Complete a 10-week mentoring program and earn a Day-One-Ready Program certificate through
+                            skill-building workshops, while creating a capstone video about your HBCU First internship
+                            experience.
+                        </p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
+
+    <section id="project">
+
+
+        <h1 class="per_projects">Projects</h1>
+
+        <main class="page-content">
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Personal Website</h2>
+                    <p class="copy">Developed using Tailwind CSS, HTML5, and Vanilla JS</p>
+                    <button class="btn" id="btn1">View</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Data For Good</h2>
+                    <p class="copy">Worked on a strategic project to help expand ZIP code for organizatiion called
+                        Ordinaries heroes utilizing the data of the factors like socio-economic condition and
+                        logistical
+                        considerations such as donor base proximity.</p>
+                    <button class="btn" id="btn2">View</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Banking Application</h2>
+                    <p class="copy">Ued java and its connectivity prototype such as JDBC and also provided a user
+                        interface using Jframe and JavaFx </p>
+                    <button class="btn" id="btn3">View</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Brain tumor detection </h2>
+                    <p class="copy">Utilized python libraries such as PyTorch, Keras, and TensorFlow to develop and
+                        evaluate neural networks model for brain diagnosis.</p>
+                    <button class="btn" id="btn4">View</button>
+                </div>
+            </div>
+        </main>
+        <div class="my-projects-btn">
+            <button id="gitbtn"> My Github </button>
+
+        </div>
+
+
+
+    </section>
+
+    <section id="skills">
+        <section class="section_4">
+            <div class="wrap">
+                <div class="cont">
+                    <h1 class="head-skill">Skills</h1>
+                    <div class="skills">
+                        <div class="details">
+                            <span>HTML</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="bar">
+                            <div id="html-bar"></div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <div class="details">
+                            <span>CSS</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="bar">
+                            <div id="css-bar"></div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <div class="details">
+                            <span>Javascript</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="bar">
+                            <div id="javascript-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills">
+                        <div class="details">
+                            <span>jQuery</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="bar">
+                            <div id="jQuery-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills">
+                        <div class="details">
+                            <span>Java</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="bar">
+                            <div id="java-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills">
+                        <div class="details">
+                            <span>Python(pandas, scipy, numpy, matplotlib, pytorch, tensorflow)</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="bar">
+                            <div id="python-bar"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </section>
+    <div class="banner-text">
+
+
+        <ul class="social">
+            <li><a href="https://github.com/bimalitani100"><i class="fa fa-github fa-2x" style="color:white"></i></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/bimal-itani-599465254/"><i class="fa fa-linkedin fa-2x"
+                        style="color:white"></i></a></li>
+            <li><a href="mailto:bimalitani100@gmail.com"><i class="fa fa-envelope fa-2x" style="color:white"></i></a>
+            </li>
+            <li><a href="https://www.facebook.com/bimal.itani.96"><i class="fa fa-facebook fa-2x"
+                        style="color:white"></i></a></li>
+        </ul>
+    </div>
+
     <footer>
-       
-        <h3 class="copy">&copy;Bimal Itani-2024.All Rights Reserved.</h3>
-        
+
+        <h3 class="copy">&copy;Bimal Itani-2025.All Rights Reserved.</h3>
+
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="JS/script.js"></script>
     <script src="JS/typewriter.js"></script>
+    <script src="JS/btn.js"></script>
+    <!-- Scripts -->
+    <script>
+        // Scrollspy
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".content_nav li a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 70) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
